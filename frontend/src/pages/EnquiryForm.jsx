@@ -21,7 +21,7 @@ const EnquiryForm = () => {
         group_12th: '', reg_no_12th: '',
         first_gen_graduate: 'No', pmss: 'No', laptop: 'No',
         college_bus: 'No', bus_boarding_point: '', hostel: 'No',
-        source: 'Direct', email: ''
+        source: 'Direct', city: '', state: 'Tamil Nadu', email: ''
     });
 
     const [errors, setErrors] = useState({});
@@ -170,6 +170,14 @@ const EnquiryForm = () => {
                         <div>
                             <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
                             <input name="email" type="email" value={formData.email} onChange={handleChange} className="w-full border p-2 rounded text-sm" />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold text-gray-700 mb-1">City/Town</label>
+                            <input name="city" value={formData.city} onChange={handleChange} className="w-full border p-2 rounded text-sm" placeholder="e.g. Coimbatore" />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold text-gray-700 mb-1">State</label>
+                            <input name="state" value={formData.state} onChange={handleChange} className="w-full border p-2 rounded text-sm" placeholder="e.g. Tamil Nadu" />
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ router.get('/:application_no', async (req, res) => {
                 return res.json({
                     application_no,
                     status: 'Enquiry Submitted',
-                    selected_course: enqResult.rows[0].interested_stream, // Mapping stream as course for enquiry level
+                    selected_course: enqResult.rows[0].course || 'General',
                     created_at: enqResult.rows[0].created_at
                 });
             }

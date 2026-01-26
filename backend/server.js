@@ -23,7 +23,7 @@ app.use('/api/courses', require('./routes/courses'));
 app.use('/api/enquiry', require('./routes/enquiries'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/admission', require('./routes/admission')); // Handles both form and admission logic if consolidated, otherwise check files
-// app.use('/api/status', require('./routes/status')); // Check if this file exists and is separate
+app.use('/api/status', require('./routes/status'));
 
 // ==========================================
 // API 2 – AI Course Recommendation

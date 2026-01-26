@@ -88,7 +88,7 @@ const Navbar = () => {
 
                     <NavLink to="/status">Status</NavLink>
                     <NavLink to="/how-to-use">Demo</NavLink>
-                    <NavLink to="/walkthrough">Flow</NavLink>
+                    {token && <NavLink to="/admin">Admin</NavLink>}
                 </div>
 
                 <div className="flex items-center space-x-6">

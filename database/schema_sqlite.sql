@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS enquiries (
     bus_boarding_point TEXT,
     hostel TEXT, -- Yes/No
     source TEXT, -- Direct, Student, Alumni, etc.
+    city TEXT, -- Place of origin
     email TEXT, -- Kept from previous
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

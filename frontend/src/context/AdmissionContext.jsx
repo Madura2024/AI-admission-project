@@ -146,9 +146,9 @@ export const AdmissionProvider = ({ children }) => {
     const finalSubmit = async () => {
         try {
             await axios.post('http://localhost:5000/api/admission/submit', { application_no: applicationNo });
-            alert("Application Submitted Successfully!");
+            localStorage.setItem('last_app_no', applicationNo);
             localStorage.removeItem('application_no');
-            // Redirect or Reset
+            window.location.href = '/admission-success';
         } catch (err) { setError(err.message); }
     };
 

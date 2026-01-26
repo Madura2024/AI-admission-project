@@ -16,8 +16,8 @@ async function seedData() {
         }
 
         // Seed Courses (Reset and Re-seed)
-        // User requested strict list, so we will truncate and insert.
-        await db.query("TRUNCATE TABLE courses RESTART IDENTITY");
+        try { await db.query("DELETE FROM courses"); } catch (e) { }
+        try { await db.query("DELETE FROM sqlite_sequence WHERE name='courses'"); } catch (e) { }
 
         for (const course of courses) {
             await db.query(

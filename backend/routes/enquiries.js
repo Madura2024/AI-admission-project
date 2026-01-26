@@ -39,8 +39,8 @@ router.post('/', async (req, res) => {
                 marks_12th_total=$31, marks_12th_phy_eco=$32, marks_12th_che_comm=$33, 
                 marks_12th_maths_accs=$34, marks_12th_comp_bio=$35, group_12th=$36, 
                 reg_no_12th=$37, first_gen_graduate=$38, pmss=$39, laptop=$40, college_bus=$41, 
-                bus_boarding_point=$42, hostel=$43, source=$44, email=$45
-                WHERE application_no=$46
+                bus_boarding_point=$42, hostel=$43, source=$44, city=$45, state=$46, email=$47
+                WHERE application_no=$48
             `;
             const values = [
                 data.institution, data.course, data.student_name, data.gender, data.dob, data.aadhar_no,
@@ -53,7 +53,7 @@ router.post('/', async (req, res) => {
                 data.marks_12th_total, data.marks_12th_phy_eco, data.marks_12th_che_comm,
                 data.marks_12th_maths_accs, data.marks_12th_comp_bio, data.group_12th,
                 data.reg_no_12th, data.first_gen_graduate, data.pmss, data.laptop, data.college_bus,
-                data.bus_boarding_point, data.hostel, data.source, data.email, application_no
+                data.bus_boarding_point, data.hostel, data.source, data.city, data.state, data.email, application_no
             ];
             await db.query(query, values);
         } else {
@@ -69,11 +69,11 @@ router.post('/', async (req, res) => {
                     marks_11th_comp_bio, marks_12th_total, marks_12th_phy_eco,
                     marks_12th_che_comm, marks_12th_maths_accs, marks_12th_comp_bio,
                     group_12th, reg_no_12th, first_gen_graduate, pmss, laptop,
-                    college_bus, bus_boarding_point, hostel, source, email
+                    college_bus, bus_boarding_point, hostel, source, city, state, email
                 ) VALUES (
                     $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19,
                     $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36,
-                    $37, $38, $39, $40, $41, $42, $43, $44, $45, $46
+                    $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48
                 )
             `;
             const values = [
@@ -86,7 +86,7 @@ router.post('/', async (req, res) => {
                 data.marks_11th_comp_bio, data.marks_12th_total, data.marks_12th_phy_eco,
                 data.marks_12th_che_comm, data.marks_12th_maths_accs, data.marks_12th_comp_bio,
                 data.group_12th, data.reg_no_12th, data.first_gen_graduate, data.pmss, data.laptop,
-                data.college_bus, data.bus_boarding_point, data.hostel, data.source, data.email
+                data.college_bus, data.bus_boarding_point, data.hostel, data.source, data.city, data.state, data.email
             ];
             await db.query(query, values);
 
