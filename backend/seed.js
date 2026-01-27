@@ -21,8 +21,8 @@ async function seedData() {
 
         for (const course of courses) {
             await db.query(
-                "INSERT INTO courses (course_name, stream, fees, eligibility) VALUES ($1, $2, $3, $4)",
-                [course.name, course.stream, course.fees, course.eligibility]
+                "INSERT INTO courses (course_name, stream, fees, eligibility, type) VALUES ($1, $2, $3, $4, $5)",
+                [course.name, course.stream, course.fees, course.eligibility, course.type]
             );
         }
         console.log(`Seeded ${courses.length} courses.`);

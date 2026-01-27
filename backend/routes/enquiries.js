@@ -94,7 +94,7 @@ router.post('/', async (req, res) => {
             if (!isDemo && data.phone_1) {
                 try {
                     const { sendSMS } = require('../utils/smsService');
-                    sendSMS(data.phone_1, `Dear ${data.student_name}, Thank you for your enquiry at KGiSL. Your Ref No is ${application_no}.`);
+                    sendSMS(data.phone_1, `Hi ${data.student_name}, your enquiry for ${data.course} has been received successfully! We will contact you soon. Thank you!`);
                 } catch (smsErr) { console.error("SMS skip/fail", smsErr); }
             }
         }

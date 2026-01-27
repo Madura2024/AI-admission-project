@@ -14,11 +14,11 @@ console.log(`Connected to SQLite database at ${dbPath}`);
 function adaptQuery(text, params) {
     let sql = text.replace(/\$\d+/g, '?');
 
+    // Handle PostgreSQL specific functions
+    sql = sql.replace(/datetime\('now'\)/gi, "CURRENT_TIMESTAMP");
+
     // Simple RETURNING handling for INSERT
     if (sql.match(/RETURNING/i)) {
-        // Strip RETURNING clause as SQLite doesn't support it fully in older versions 
-        // or node-sqlite3 might not return it effectively in run().
-        // We will handle returning manually if needed.
         sql = sql.replace(/RETURNING\s+\w+/i, '');
         return { sql, hasReturning: true };
     }

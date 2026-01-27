@@ -51,8 +51,28 @@ def recommend():
     except ValueError:
         logger.error("Invalid marks format")
         return jsonify({"error": "Invalid marks format"}), 400
+@app.route('/chat', methods=['POST'])
+def chat():
+    try:
+        data = request.json
+        message = data.get('message', '').lower()
+        
+        # Simple rule-based chatbot for admission queries
+        if 'cutoff' in message or 'calculate' in message:
+            response = "The cutoff is calculated as: Maths + (Physics/2) + (Chemistry/2). It is out of 200."
+        elif 'documents' in message or 'certificate' in message:
+            response = "You will need: 10th & 12th Marksheets, Aadhaar Card, Community Certificate, and Transfer Certificate."
+        elif 'fees' in message:
+            response = "Fees vary by course. You can check the 'Courses' section for detailed fee structures."
+        elif 'deadline' in message or 'last date' in message:
+            response = "The last date for registration depends on the government counseling schedule. We recommend applying early."
+        elif 'hi' in message or 'hello' in message:
+            response = "Hello! I am your Admission Assistant. How can I help you with the form today?"
+        else:
+            response = "I'm here to help with your admission! You can ask about cutoff calculation, required documents, or courses."
+
+        return jsonify({"response": response})
     except Exception as e:
-        logger.error(f"Internal Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
