@@ -1,0 +1,5 @@
+=== DB Diagnostic Log ===
+Current columns in 'enquiries': id, application_no, institution, course, student_name, gender, dob, aadhar_no, quota, father_name, father_occupation, mother_name, mother_occupation, annual_income, community, address, pincode, phone_1, phone_2, phone_3, school_name_place, school_type, board_of_study, medium_of_instruction, marks_10th_total, marks_10th_maths, marks_10th_science, marks_11th_total, marks_11th_phy_eco, marks_11th_che_comm, marks_11th_maths_accs, marks_11th_comp_bio, marks_12th_total, marks_12th_phy_eco, marks_12th_che_comm, marks_12th_maths_accs, marks_12th_comp_bio, group_12th, reg_no_12th, first_gen_graduate, pmss, laptop, college_bus, bus_boarding_point, hostel, source, city, email, created_at
+Missing 'state' column. Adding it...
+'state' added successfully.
+Done checking/updating database.

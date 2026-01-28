@@ -57,7 +57,7 @@ const Navbar = () => {
                                 onClick={() => {
                                     localStorage.setItem('admission_type', 'UG');
                                     navigate('/courses?type=UG');
-                                    window.location.reload(); // Force re-render of CourseList if already there
+                                    window.location.reload();
                                 }}
                                 className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-50"
                             >
@@ -88,6 +88,25 @@ const Navbar = () => {
 
                     <NavLink to="/status">Status</NavLink>
                     <NavLink to="/how-to-use">Demo</NavLink>
+
+                    {/* Datas Dropdown */}
+                    <div className="relative group">
+                        <button className="text-sm font-medium text-gray-600 hover:text-indigo-600 flex items-center h-full py-2 transition-colors duration-300">
+                            Datas
+                            <svg className="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20">
+                                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                            </svg>
+                        </button>
+                        <div className="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 border border-gray-100 overflow-hidden">
+                            <Link to="/enquiry-data" className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-50">
+                                Enquiry Data
+                            </Link>
+                            <Link to="/application-data" className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
+                                Application Data
+                            </Link>
+                        </div>
+                    </div>
+
                     {token && <NavLink to="/admin">Admin</NavLink>}
                 </div>
 

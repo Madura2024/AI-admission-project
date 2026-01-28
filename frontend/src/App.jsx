@@ -10,7 +10,10 @@ import AdminDashboard from './pages/AdminDashboard'
 import Home from './pages/Home'
 import HowToUse from './pages/HowToUse'
 import SystemWalkthrough from './pages/SystemWalkthrough'
+import EnquiryData from './pages/EnquiryData'
+import ApplicationData from './pages/ApplicationData'
 import Navbar from './components/Navbar'
+import ChatBot from './components/ChatBot'
 
 function App() {
     return (
@@ -27,9 +30,12 @@ function App() {
                     <Route path="/status" element={<StatusTracking />} />
                     <Route path="/how-to-use" element={<HowToUse />} />
                     <Route path="/walkthrough" element={<SystemWalkthrough />} />
+                    <Route path="/enquiry-data" element={<EnquiryData />} />
+                    <Route path="/application-data" element={<ApplicationData />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                 </Routes>
             </div>
+            <ChatBot />
         </div>
     )
 }

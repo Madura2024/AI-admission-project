@@ -75,64 +75,24 @@ const Home = () => {
                     ))}
                 </div>
             </section>
-            {/* Recent Enquiries Section (Tabular View) */}
+            {/* Dashboard Call-to-Action */}
             <section className="py-24 bg-gray-50">
-                <div className="container mx-auto px-6">
-                    <div className="flex justify-between items-center mb-12">
-                        <div>
-                            <h2 className="text-3xl font-extrabold text-gray-900 border-l-4 border-indigo-600 pl-4">Live Student Enquiries</h2>
-                            <p className="text-gray-500 mt-2">Tabular View of Recent Applications</p>
+                <div className="container mx-auto px-6 text-center">
+                    <div className="max-w-3xl mx-auto bg-white p-12 rounded-3xl shadow-xl border border-indigo-100">
+                        <h2 className="text-3xl font-black text-gray-900 mb-6">Manage Your Data</h2>
+                        <p className="text-gray-500 mb-8 leading-relaxed">
+                            Access our newly created dedicated data pages to view all enquiries
+                            and applications in detail.
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-4">
+                            <Link to="/enquiry-data" className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg">
+                                View Enquiry Data
+                            </Link>
+                            <Link to="/application-data" className="px-6 py-3 bg-white text-indigo-600 border border-indigo-100 rounded-xl font-bold hover:shadow-md transition">
+                                View Application Data
+                            </Link>
                         </div>
-                        <Link to="/admin" className="text-indigo-600 font-bold hover:underline">View Admin Dashboard →</Link>
                     </div>
-
-                    <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-                        {loadingEnquiries ? (
-                            <div className="py-20 text-center text-gray-400 font-medium">Loading Live Data...</div>
-                        ) : recentEnquiries.length === 0 ? (
-                            <div className="py-20 text-center text-gray-400">No recent enquiries found.</div>
-                        ) : (
-                            <div className="overflow-x-auto">
-                                <table className="min-w-full divide-y divide-gray-100">
-                                    <thead className="bg-gray-50">
-                                        <tr>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-400 uppercase tracking-widest">Student Name</th>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-400 uppercase tracking-widest">Place (City/State)</th>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-400 uppercase tracking-widest">Course</th>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-400 uppercase tracking-widest">Source</th>
-                                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-400 uppercase tracking-widest">Day & Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="bg-white divide-y divide-gray-50">
-                                        {recentEnquiries.slice(0, 5).map((enq) => (
-                                            <tr key={enq.application_no} className="hover:bg-indigo-50/30 transition-colors">
-                                                <td className="px-6 py-5 whitespace-nowrap">
-                                                    <div className="font-bold text-gray-900">{enq.student_name}</div>
-                                                    <div className="text-[10px] text-indigo-500 font-mono">{enq.application_no}</div>
-                                                </td>
-                                                <td className="px-6 py-5 whitespace-nowrap">
-                                                    <div className="text-sm font-semibold text-gray-800">{enq.city || 'N/A'}</div>
-                                                    <div className="text-[10px] text-gray-400 uppercase">{enq.state || 'N/A'}</div>
-                                                </td>
-                                                <td className="px-6 py-5 whitespace-nowrap text-sm text-gray-600">{enq.course}</td>
-                                                <td className="px-6 py-5 whitespace-nowrap">
-                                                    <span className="px-2 py-1 bg-indigo-50 text-indigo-600 rounded text-[10px] font-bold uppercase border border-indigo-100">
-                                                        {enq.source}
-                                                    </span>
-                                                </td>
-                                                <td className="px-6 py-5 whitespace-nowrap text-xs text-gray-500 font-medium">
-                                                    {new Date(enq.created_at).toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        )}
-                    </div>
-                    <p className="mt-8 text-center text-gray-400 text-sm">
-                        * This is a live preview of public enquiries for demonstration purposes. Admin access required for full details.
-                    </p>
                 </div>
             </section>
         </div>
