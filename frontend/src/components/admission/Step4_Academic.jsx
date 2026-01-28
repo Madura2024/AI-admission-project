@@ -35,6 +35,7 @@ const Step4_Academic = () => {
                     <h3 className="font-bold text-gray-700 mb-2">X Std Details</h3>
                     <div className="space-y-2">
                         <input type="text" name="x_school_name" placeholder="School Name" onChange={handleChange} value={academicDetails.x_school_name} className="w-full p-2 border rounded" required />
+                        <p className="mt-1 text-[10px] text-gray-400 italic">Example: Govt Hr Sec School, CBE</p>
                         <input type="text" name="x_board" placeholder="Board (State/CBSE)" onChange={handleChange} value={academicDetails.x_board} className="w-full p-2 border rounded" required />
                         <div className="flex gap-2">
                             <input type="text" name="x_month_year" placeholder="Mon & Year (May 2024)" onChange={handleChange} value={academicDetails.x_month_year} className="w-1/2 p-2 border rounded" required />

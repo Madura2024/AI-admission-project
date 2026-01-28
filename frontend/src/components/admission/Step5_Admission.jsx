@@ -65,11 +65,13 @@ const Step5_Admission = () => {
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Allotment / Consortium No</label>
                     <input type="text" name="allotment_no" value={admissionDetails.allotment_no} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded p-2" />
+                    <p className="mt-1 text-[10px] text-gray-400 italic">Example: TNEA-123456 / CONS-789</p>
                 </div>
 
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Admission Allocated Quota</label>
                     <input type="text" name="quota" value={admissionDetails.quota} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded p-2" />
+                    <p className="mt-1 text-[10px] text-gray-400 italic">Example: BC-GQ / MBC-MQ</p>
                 </div>
 
                 <div>
@@ -109,6 +111,7 @@ const Step5_Admission = () => {
                     <div className="md:col-span-2">
                         <label className="block text-sm font-medium text-gray-700">Boarding Point</label>
                         <input type="text" name="boarding_point" value={admissionDetails.boarding_point} onChange={handleChange} required className="mt-1 block w-full border border-gray-300 rounded p-2" />
+                        <p className="mt-1 text-[10px] text-gray-400 italic">Example: Gandhipuram / Pollachi Bus Stand</p>
                     </div>
                 )}
             </div>

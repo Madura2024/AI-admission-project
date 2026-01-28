@@ -174,6 +174,7 @@ const EnquiryForm = () => {
                         <div className="md:col-span-2">
                             <label className="block text-sm font-bold text-slate-700 mb-3 ml-1">Course Interested</label>
                             <input name="course" value={formData.course} onChange={handleChange} placeholder="Select your preferred discipline" className="input-premium" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: B.E. Computer Science and Engineering</p>
                         </div>
                     </div>
                 </div>
@@ -191,6 +192,7 @@ const EnquiryForm = () => {
                         <div className="md:col-span-2">
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Full Name</label>
                             <input name="student_name" value={formData.student_name} onChange={handleChange} className="input-premium" placeholder="Enter student's full name" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: RAJESH KUMAR S</p>
                         </div>
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Gender</label>
@@ -203,10 +205,12 @@ const EnquiryForm = () => {
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">DOB</label>
                             <input name="dob" type="date" value={formData.dob} onChange={handleChange} className="input-premium" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: 15/05/2008</p>
                         </div>
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Aadhaar No</label>
                             <input name="aadhar_no" value={formData.aadhar_no} onChange={handleChange} className="input-premium" placeholder="0000 0000 0000" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: 5467 8901 2345</p>
                         </div>
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Quota</label>
@@ -228,6 +232,7 @@ const EnquiryForm = () => {
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Residential City</label>
                             <input name="city" value={formData.city} onChange={handleChange} className="input-premium" placeholder="e.g. Coimbatore" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: Coimbatore</p>
                         </div>
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">State</label>
@@ -249,10 +254,12 @@ const EnquiryForm = () => {
                         <div className="md:col-span-2">
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Father's Name</label>
                             <input name="father_name" value={formData.father_name} onChange={handleChange} className="input-premium" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: SELVAM K</p>
                         </div>
                         <div className="md:col-span-2">
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Occupation</label>
                             <input name="father_occupation" value={formData.father_occupation} onChange={handleChange} className="input-premium" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: Business / Farmer</p>
                         </div>
                         <div className="md:col-span-2">
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Mother's Name</label>
@@ -265,6 +272,7 @@ const EnquiryForm = () => {
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Annual Income</label>
                             <input name="annual_income" value={formData.annual_income} onChange={handleChange} className="input-premium" placeholder="In Rupees" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: 2,50,000</p>
                         </div>
                         <div className="md:col-span-3">
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Full Address</label>
@@ -273,6 +281,7 @@ const EnquiryForm = () => {
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Pincode</label>
                             <input name="pincode" value={formData.pincode} onChange={handleChange} className="input-premium" placeholder="600001" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: 641035</p>
                         </div>
                         <div className="md:col-span-1">
                             <label className="block text-sm font-bold text-indigo-600 mb-2 ml-1">🎓 Student WhatsApp</label>
@@ -302,6 +311,7 @@ const EnquiryForm = () => {
                         <div className="md:col-span-3">
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Previous School Name & Place</label>
                             <input name="school_name_place" value={formData.school_name_place} onChange={handleChange} className="input-premium" />
+                            <p className="mt-1 text-[10px] text-slate-400 italic ml-1">Example: Govt Hr Sec School, Pollachi</p>
                         </div>
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">School Type</label>

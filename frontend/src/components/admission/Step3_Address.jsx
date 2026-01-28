@@ -43,11 +43,13 @@ const Step3_Address = () => {
                             <label className="block text-sm font-medium text-gray-700">State *</label>
                             <input type="text" name="perm_state" value={addressDetails.perm_state} onChange={handleChange} required
                                 className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+                            <p className="mt-1 text-xs text-gray-400 italic">Example: Tamil Nadu</p>
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Pincode *</label>
                             <input type="number" name="perm_pincode" value={addressDetails.perm_pincode} onChange={handleChange} required
                                 className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+                            <p className="mt-1 text-xs text-gray-400 italic">Example: 641035</p>
                         </div>
                     </div>
                 </div>

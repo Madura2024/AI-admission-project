@@ -42,6 +42,7 @@ const Step1_Personal = () => {
                     <label className="block text-sm font-medium text-gray-700">Candidate Name (Block Letters) *</label>
                     <input type="text" name="full_name" value={personalDetails.full_name} onChange={handleChange} required
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 uppercase" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: ARUN KUMAR M</p>
                 </div>
 
                 <div>
@@ -56,6 +57,7 @@ const Step1_Personal = () => {
                     <label className="block text-sm font-medium text-gray-700">Aadhar Number</label>
                     <input type="number" name="aadhar_number" value={personalDetails.aadhar_number} onChange={handleChange}
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: 546789012345</p>
                 </div>
 
                 <div>
@@ -85,6 +87,7 @@ const Step1_Personal = () => {
                     <label className="block text-sm font-medium text-gray-700">Religion</label>
                     <input type="text" name="religion" value={personalDetails.religion} onChange={handleChange}
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: Hindu / Christian / Muslim</p>
                 </div>
 
                 <div>
@@ -114,6 +117,7 @@ const Step1_Personal = () => {
                     <label className="block text-sm font-medium text-gray-700">Caste</label>
                     <input type="text" name="caste" value={personalDetails.caste} onChange={handleChange}
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: Kongu Vellala Gounder</p>
                 </div>
 
                 <div>
@@ -136,6 +140,7 @@ const Step1_Personal = () => {
                     <label className="block text-sm font-medium text-gray-700">WhatsApp No</label>
                     <input type="tel" name="whatsapp_no" value={personalDetails.whatsapp_no} onChange={handleChange}
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: 9876543210</p>
                 </div>
 
                 <div>
@@ -148,6 +153,7 @@ const Step1_Personal = () => {
                     <label className="block text-sm font-medium text-gray-700">Email Address *</label>
                     <input type="email" name="email" value={personalDetails.email} onChange={handleChange} required
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: arunkumar@gmail.com</p>
                 </div>
             </div>
 

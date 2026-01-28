@@ -41,11 +41,13 @@ const Step2_Parent = () => {
                         <label className="block text-sm font-medium text-gray-700">Father Name *</label>
                         <input type="text" name="father_name" value={parentDetails.father_name} onChange={handleChange} required
                             className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+                        <p className="mt-1 text-xs text-gray-400 italic">Example: SELVAM K</p>
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Mobile No *</label>
                         <input type="tel" name="father_mobile" value={parentDetails.father_mobile} onChange={handleChange} required
                             className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+                        <p className="mt-1 text-xs text-gray-400 italic">Example: 9443212345</p>
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Father Photo</label>
@@ -70,6 +72,7 @@ const Step2_Parent = () => {
                         <label className="block text-sm font-medium text-gray-700">Mother Name *</label>
                         <input type="text" name="mother_name" value={parentDetails.mother_name} onChange={handleChange} required
                             className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+                        <p className="mt-1 text-xs text-gray-400 italic">Example: LATHA S</p>
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Mobile No</label>
@@ -96,6 +99,7 @@ const Step2_Parent = () => {
                     <label className="block text-sm font-medium text-gray-700">Parent Annual Income</label>
                     <input type="number" name="annual_income" value={parentDetails.annual_income} onChange={handleChange}
                         className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+                    <p className="mt-1 text-xs text-gray-400 italic">Example: 250000</p>
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Student Mobile No</label>

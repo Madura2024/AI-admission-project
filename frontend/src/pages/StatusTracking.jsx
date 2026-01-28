@@ -22,14 +22,17 @@ const StatusTracking = () => {
         <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg mt-10">
             <h2 className="text-2xl font-bold mb-6 text-indigo-700 text-center">Track App</h2>
             <form onSubmit={handleTrack} className="flex gap-2 mb-6">
-                <input
-                    value={appNo}
-                    onChange={(e) => setAppNo(e.target.value)}
-                    placeholder="App Number"
-                    required
-                    className="flex-1 border p-3 rounded"
-                />
-                <button className="bg-indigo-600 text-white px-4 rounded font-semibold hover:bg-indigo-700">Track</button>
+                <div className="flex-1">
+                    <input
+                        value={appNo}
+                        onChange={(e) => setAppNo(e.target.value)}
+                        placeholder="App Number"
+                        required
+                        className="w-full border p-3 rounded"
+                    />
+                    <p className="mt-1 text-[10px] text-gray-400 italic">Example: APP12345</p>
+                </div>
+                <button className="bg-indigo-600 text-white px-4 rounded font-semibold hover:bg-indigo-700 h-[50px]">Track</button>
             </form>
 
             {error && <p className="text-red-500 text-center">{error}</p>}
